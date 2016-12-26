@@ -1,0 +1,57 @@
+<div ng-controller="homeCtrl">
+  <nav class="navbar navbar-default">
+  <div class="col-md-6">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" id="img-logo" src="assets/img/logoSistemaHorizontal.png">
+        </a>
+    	</div>
+   </div>
+  <div class="cod-md-6">
+  	<div class="container-fluid">
+  		  <div class="collapse navbar-collapse" id="bar1">
+  					<ul class="nav navbar-nav">
+  					    <li><button class="btn" type="button">Perfil</button></li>
+  					    <li><button class="btn" type="button">Ocorrências</button></li>
+  					    <li><button class="btn" type="button">Usuários</button></li>
+  					    <li><button class="btn" id ="logout" ng-click="logout()"> Log out</button></li>
+  					</ul>
+  		  </div>
+  	</div>
+  </div>
+  </nav>
+  <div class="container">
+  	<aside>
+  		<section>
+  			<div class="page-header">
+  			  <h1>Bem-vindo, joaomarcusjesus@gmail.com!</h1>
+  			</div>
+  		</section>
+    </aside>
+    <div class="dashboard">
+      <div class="row">
+        <div class="dashboard-content col-xs-6 col-md-3">
+          <a ng-click="ocorrencias()" class="thumbnail">
+            <span class="glyphicon glyphicon-asterisk"  style="font-size: 150px;
+color: red;" aria-hidden="true"></span>
+          </a>
+          <span>Listar Ocorrências</span>
+        </div>
+        <div class="dashboard-content col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <span class="glyphicon glyphicon-user"  style="font-size: 150px;
+color: blue;" aria-hidden="true"></span>
+          </a>
+          <span>Listar Usuários</span>
+        </div>
+        <div class="dashboard-content col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <span class="glyphicon glyphicon-road"  style="font-size: 150px;
+color: green;" aria-hidden="true"></span>
+          </a>
+          <span>Cadastrar Nova Unidade</span>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

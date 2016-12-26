@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SAMU Mobile</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+</head>
+<body>
+  <div ng-view></div>
+
+
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="http://code.angularjs.org/1.2.6/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+  <script src="app.js"></script>
+  <script src="js/controllers/home/home.js"></script>
+  <script src="js/controllers/register/register.js"></script>
+  <script src="js/controllers/welcome/welcome.js"></script>
+  <script src="js/controllers/ocorrencias/ocorrencias.js"></script>
+  <script src="js/controllers/ocorrencias/edit.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+  <script>
+    var config = {
+    apiKey: "AIzaSyB88KnSK_FW1llS1s4KbM3SdmASKacKNMs",
+    authDomain: "fir-application-9d853.firebaseapp.com",
+    databaseURL: "https://fir-application-9d853.firebaseio.com",
+    storageBucket: "fir-application-9d853.appspot.com",
+    messagingSenderId: "878821889797"
+  };
+  firebase.initializeApp(config);
+
+  </script>
+</body>
+</html>

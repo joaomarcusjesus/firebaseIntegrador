@@ -1,0 +1,22 @@
+<div class="pen-title" ng-controller="registerCtrl">
+    <span class="brand col-md-12">
+      <img src="assets/img/logoAppHorizontal.png" alt="Logo tipo">
+    </span>
+</div>
+<!-- Form Module-->
+<div class="module form-module">
+  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+    <div class="tooltip">Click Me</div>
+  </div>
+  <div class="form" name="regForm">
+    <h2>Logue-se aqui!</h2>
+    <form name="regForm">
+      <input ng-model="user.email" autocomplete="off" type="text" placeholder="E-mail"/>
+      <input ng-model="user.password" autocomplete="off" type="password" placeholder="Senha"/>
+      <button ng-click="signIn()" ng-disabled="!user.email || !user.password">Entrar</button>
+      <div class="create">
+        <small>Não tem uma conta? <a href="#">Clique aqui!</a></small>
+      </div>
+    </form>
+  </div>
+ </div>

@@ -1,0 +1,54 @@
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+<div class="container">
+  <div class="row">
+      <div class="ocorrencias">
+          <div class="well">Ocorrências Registradas</div>
+          <div class="pull-right">
+            <span ng-click="backPage()">Voltar</span>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    <form ng-submit="editFormSubmit()" ng-show="editFormShow">
+        <input type="text" ng-model="endereco" placeholder="Endereço" />
+        <input type="text" ng-model="status" placeholder="Status" />
+        <input type="submit" value="Editar Ocorrência" placeholder="Status" />
+    </form>
+  </div>
+  <div class="row">
+      <div class="listar-ocorrencias">
+        <table class="table table-bordered">
+          <thead>
+              <!-- <th>ID</th> -->
+              <th>Ciência</th>
+              <th>Urgência</th>
+              <th>Respiração</th>
+              <th>Endereço</th>
+              <th>Data</th>
+              <th>Hora</th>
+              <th>Status</th>
+              <th>Ações</th>
+          </thead>
+          <tbody id="container-list">
+            <tr ng-repeat=" ocorrencia in ocorrencias">
+              <td> {{ ocorrencia.ciencia }} </td>
+              <td> {{ ocorrencia.urgencia }} </td>
+              <td> {{ ocorrencia.respiracao }} </td>
+              <td> {{ ocorrencia.endereco }} </td>
+              <td> {{ ocorrencia.data }} </td>
+              <td> {{ ocorrencia.hora }} </td>
+              <td> {{ ocorrencia.status }} </td>
+              <td class="col-md-4">
+                <button type='button' class='btn btn-default' ng-click="showMeeting(ocorrencia)">Editar</button>
+                <button type='button' class='btn btn-default' ng-click="deleteMeeting(ocorrencia)">Deletar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" ng-click="showForm()" ng-hide="editFormShow">+</button>
+        <button type="button" ng-click="hideForm()" ng-show="editFormShow">-</button>
+      </div>
+  </div>
+</div>
